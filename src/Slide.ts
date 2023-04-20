@@ -87,7 +87,9 @@ export default class Slide {
     this.show(next);
   }
   pause() {
-    document.body.classList.add("paused");
+    document.body.addEventListener("contextmenu", function (e) {
+      e.preventDefault();
+    });
     this.pausedTimeout = new Timeout(() => {
       this.timeout?.pause();
       this.paused = true;
@@ -96,7 +98,6 @@ export default class Slide {
     }, 300);
   }
   continue() {
-    document.body.classList.remove("paused");
     this.pausedTimeout?.clear();
     if (this.paused) {
       this.paused = false;
@@ -105,6 +106,7 @@ export default class Slide {
       if (this.slide instanceof HTMLVideoElement) this.slide.play();
     }
   }
+
   private addControls() {
     const prevButton = document.createElement("button");
     const nextButton = document.createElement("button");
