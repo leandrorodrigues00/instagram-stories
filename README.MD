@@ -1,4 +1,4 @@
-# Instagram-stories - Stories-like Instagram slide. 📸
+# Instagram-stories - Stories like on instagram. 📸
 
 <br>
 
@@ -23,7 +23,67 @@ With all these functionalities, this slider is a great option for those who want
 
 [click here, see closer](https://instagram-stories-cs.netlify.app/) 😉
 
+## Usage
 
+ The ``Slide`` class implements the story carousel, it expects to receive 4 parameters:
+
+- **container**: an HTML element that will contain the slides. 
+- **slides**: an array of HTML elements that represent each slide to be displayed.
+- **controls**: an HTML element that contains the controls for navigating through the slides (previous and next buttons).
+- **time**: a numeric value that represents the duration time of each slide in milliseconds (optional, the default value is 5000).
+
+```javascript
+const container = document.getElementById("slide");
+const elements = document.getElementById("slide-elements");
+const controls = document.getElementById("slide-controls");
+
+if (container && elements && controls && elements.children.length) {
+  const slide = new Slide(
+    container, 
+    Array.from(elements.children),
+    controls,
+    3000
+  );
+}
+```
+
+## Methods
+
+The slide class has some public methods that can be useful for many different projects.
+
+| Method               | Description           |                                                                                                                       
+|-------------------------------------------------------------------------------------------------------------------------------------------------------------------| - 
+| `show(index: number)`|   Displays the slide corresponding to the index passed as parameter and updates the state of the control.    
+| `prev()`|    Shows the slide preceding the current slide.     
+| `next()`|    shows the next slide after the current slide.
+| `pause()`|   pauses the automatic slideshow. This is triggered by a "pointerdown" event (such as a click or tap) in the slideshow controls.
+| `continue()`| continues the automatic presentation of the slides after the pause. This is triggered by a "pointerup" or "touchend" event outside the slideshow controls
+| `autoVideo(video: HTMLVideoElement)`|   Adds a new video to the slide and sets the transition time equal to the duration of the video. This function can be useful if you want to add a video dynamically to the slide after startup, or if you want to modify the transition time of the slide to match the duration of the video.
+
+example:
+
+```javascript
+ ...
+  {
+  const slide = new Slide(
+    container, 
+    Array.from(elements.children),
+    controls,
+    3000
+  );
+  
+  slide.show(1);
+  slide.prev();
+  slide.next();
+  slide.pause();
+  slide.continue();
+  
+  const video = document.getElementById("video2");
+  slide.autoVideo(video as HTMLVideoElement);
+}
+...
+
+```
 
 ## 🚀 Technologies
 
