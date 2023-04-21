@@ -22,7 +22,7 @@ Among the main functionalities of this slider, we can highlight: the support for
 With all these functionalities, this slider is a great option for those who want to create an interactive and attractive experience for their users.  
 
 [click here, see closer](https://instagram-stories-cs.netlify.app/) 😉
-
+[Origamid](https://www.origamid.com/)
 ## Usage
 
  The ``Slide`` class implements the story carousel, it expects to receive 4 parameters:
@@ -58,7 +58,10 @@ The slide class has some public methods that can be useful for many different pr
 | `next()`|    shows the next slide after the current slide.
 | `pause()`|   pauses the automatic slideshow. This is triggered by a "pointerdown" event (such as a click or tap) in the slideshow controls.
 | `continue()`| continues the automatic presentation of the slides after the pause. This is triggered by a "pointerup" or "touchend" event outside the slideshow controls
-| `autoVideo(video: HTMLVideoElement)`|   Adds a new video to the slide and sets the transition time equal to the duration of the video. This function can be useful if you want to add a video dynamically to the slide after startup.
+| `autoVideo(video: HTMLVideoElement)`| Add a new video to the slide, set the transition time equal to the video duration and mute the audio so that the autoplay feature is available. This function can be useful if you want to add a video dynamically to the slide after startup.
+
+
+
 
 example:
 
@@ -132,5 +135,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ---
 
 <p align="center">
-  Made with 💜&nbsp; by  Leandro Rodrigues
+  Made with 💜&nbsp; by Leandro Rodrigues<br>
+  as the final project of the typescript course of <a href="https://www.origamid.com/">Origamid</a>
 </p>
