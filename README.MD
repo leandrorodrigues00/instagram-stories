@@ -58,7 +58,7 @@ The slide class has some public methods that can be useful for many different pr
 | `next()`|    shows the next slide after the current slide.
 | `pause()`|   pauses the automatic slideshow. This is triggered by a "pointerdown" event (such as a click or tap) in the slideshow controls.
 | `continue()`| continues the automatic presentation of the slides after the pause. This is triggered by a "pointerup" or "touchend" event outside the slideshow controls
-| `autoVideo(video: HTMLVideoElement)`|   Adds a new video to the slide and sets the transition time equal to the duration of the video. This function can be useful if you want to add a video dynamically to the slide after startup, or if you want to modify the transition time of the slide to match the duration of the video.
+| `autoVideo(video: HTMLVideoElement)`|   Adds a new video to the slide and sets the transition time equal to the duration of the video. This function can be useful if you want to add a video dynamically to the slide after startup.
 
 example:
 
