@@ -22,7 +22,7 @@ Among the main functionalities of this slider, we can highlight: the support for
 With all these functionalities, this slider is a great option for those who want to create an interactive and attractive experience for their users.  
 
 [click here, see closer](https://instagram-stories-cs.netlify.app/) 😉
-[Origamid](https://www.origamid.com/)
+
 ## Usage
 
  The ``Slide`` class implements the story carousel, it expects to receive 4 parameters:
