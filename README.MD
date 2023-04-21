@@ -64,23 +64,31 @@ example:
 
 ```javascript
  ...
-  {
-  const slide = new Slide(
-    container, 
-    Array.from(elements.children),
-    controls,
-    3000
-  );
-  
-  slide.show(1);
-  slide.prev();
-  slide.next();
-  slide.pause();
-  slide.continue();
-  
-  const video = document.getElementById("video2");
-  slide.autoVideo(video as HTMLVideoElement);
-}
+const slide = new Slide(
+  container, 
+  Array.from(elements.children),
+  controls,
+  3000
+);
+
+// Display the second slide
+slide.show(1);
+
+// Move to the previous slide
+slide.prev();
+
+// Move to the next slide
+slide.next();
+
+// Pause the slideshow
+slide.pause();
+
+// Resume the slideshow
+slide.continue();
+
+// Add a new video and set the transition time to match its duration
+const video = document.getElementById("video2");
+slide.autoVideo(video as HTMLVideoElement);
 ...
 
 ```
